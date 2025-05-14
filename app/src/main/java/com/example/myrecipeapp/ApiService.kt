@@ -8,6 +8,8 @@ private val retrofit = Retrofit.Builder().baseUrl("https://www.themealdb.com/api
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
+    val recipeService = retrofit.create(ApiService::class.java)
+
 interface ApiService{
     @GET("categories.php")
     suspend fun getCategories(): CategoriesResponse
