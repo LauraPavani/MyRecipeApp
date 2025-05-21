@@ -58,8 +58,10 @@ fun CategoryItem(category: Category){
     {
         Image(
             painter = rememberAsyncImagePainter(category.strCategoryThumb),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize().aspectRatio(1f)
+            contentDescription = null, //Handle accessibility
+            modifier = Modifier
+                .fillMaxSize()
+                .aspectRatio(1f)
         )
         Text(
             text = category.strCategory,

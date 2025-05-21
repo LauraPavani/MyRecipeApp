@@ -10,7 +10,13 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
+    plugins {
+        id("com.android.application") version "8.2.0"
+        id("org.jetbrains.kotlin.android") version "1.9.0" // or whatever matches your setup
+    }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -21,4 +27,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyRecipeApp"
 include(":app")
- 
